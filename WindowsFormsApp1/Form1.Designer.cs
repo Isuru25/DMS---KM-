@@ -51,6 +51,7 @@ namespace WindowsFormsApp1
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.refresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,7 +116,7 @@ namespace WindowsFormsApp1
             // nameTxt
             // 
             this.nameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameTxt.Location = new System.Drawing.Point(283, 84);
+            this.nameTxt.Location = new System.Drawing.Point(294, 86);
             this.nameTxt.Name = "nameTxt";
             this.nameTxt.Size = new System.Drawing.Size(248, 28);
             this.nameTxt.TabIndex = 7;
@@ -123,7 +124,7 @@ namespace WindowsFormsApp1
             // addressTxt
             // 
             this.addressTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addressTxt.Location = new System.Drawing.Point(283, 139);
+            this.addressTxt.Location = new System.Drawing.Point(294, 141);
             this.addressTxt.Name = "addressTxt";
             this.addressTxt.Size = new System.Drawing.Size(248, 28);
             this.addressTxt.TabIndex = 8;
@@ -131,7 +132,7 @@ namespace WindowsFormsApp1
             // contact
             // 
             this.contact.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contact.Location = new System.Drawing.Point(283, 195);
+            this.contact.Location = new System.Drawing.Point(294, 197);
             this.contact.Name = "contact";
             this.contact.Size = new System.Drawing.Size(248, 28);
             this.contact.TabIndex = 9;
@@ -139,7 +140,7 @@ namespace WindowsFormsApp1
             // emailTxt
             // 
             this.emailTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailTxt.Location = new System.Drawing.Point(283, 252);
+            this.emailTxt.Location = new System.Drawing.Point(294, 252);
             this.emailTxt.Name = "emailTxt";
             this.emailTxt.Size = new System.Drawing.Size(248, 28);
             this.emailTxt.TabIndex = 10;
@@ -147,7 +148,7 @@ namespace WindowsFormsApp1
             // description
             // 
             this.description.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.description.Location = new System.Drawing.Point(283, 315);
+            this.description.Location = new System.Drawing.Point(294, 315);
             this.description.Multiline = true;
             this.description.Name = "description";
             this.description.Size = new System.Drawing.Size(248, 100);
@@ -251,12 +252,26 @@ namespace WindowsFormsApp1
             this.delete.UseColumnTextForButtonValue = true;
             this.delete.Width = 125;
             // 
+            // refresh
+            // 
+            this.refresh.BackColor = System.Drawing.Color.Navy;
+            this.refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.refresh.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.refresh.Location = new System.Drawing.Point(965, 562);
+            this.refresh.Name = "refresh";
+            this.refresh.Size = new System.Drawing.Size(189, 66);
+            this.refresh.TabIndex = 16;
+            this.refresh.Text = "Refresh";
+            this.refresh.UseVisualStyleBackColor = false;
+            this.refresh.Click += new System.EventHandler(this.refresh_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1477, 640);
+            this.Controls.Add(this.refresh);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.save);
             this.Controls.Add(this.description);
@@ -301,6 +316,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewButtonColumn edit;
         private System.Windows.Forms.DataGridViewButtonColumn delete;
+        private System.Windows.Forms.Button refresh;
     }
 }
 
